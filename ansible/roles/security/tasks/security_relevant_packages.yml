@@ -1,0 +1,80 @@
+---
+- name: "Ensure X Window System is not installed"
+  package:
+    name: "{{ item }}"
+    state: "absent"
+  with_items:
+    - "@X Window System"
+    - "x11*"
+
+- name: "load facts"
+  setup:
+    filter: ansible_facts.packages
+
+- name: "Remove hfs module"
+  modprobe:
+    name: "{{ item }}"
+    state: "absent"
+  with_items:
+    - "freevxfs"
+    - "jffs2"
+    - "hfs"
+    - "hfsplus"
+    - "udf"
+
+- name: "install stuff"
+  package:
+    package: "*"
+    state: "latest"
+  when: not skip_full_upgrade
+
+- name: "install stuff"
+  package:
+    package: "{{ item }}"
+    state: "latest"
+    install_recommends: false
+  loop:
+    - "apt-listchanges"
+    - "apt-transport-https"
+    - "auditd"
+    - "bsd-mailx"
+    - "checksecurity"
+    - "debsecan"
+    - "debsums"
+    - "fail2ban"
+    - "hardening-runtime"
+    - "haveged"
+    - "iptables"
+    - "jitterentropy-rngd"
+    - "libpam-cracklib"
+    - "libpam-pwquality"
+    - "libpam-tmpdir"
+    - "logwatch"
+    - "needrestart"
+    - "python3-cracklib"
+    - "python3-pip"
+    - "python3-selinux"
+    - "rkhunter"
+    - "selinux-basics"
+    - "selinux-policy-default"
+    - "selinux-utils"
+    - "sysstat"
+    - "ufw"
+
+- name: "get packages facts"
+  package_facts:
+    manager: "auto"
+  register: "result"
+  retries: "3"
+  delay: "10"
+  until: result is not failed
+
+- include_tasks: stop_services.yml
+  loop:
+    - avahi-daemon
+    - cups
+    - slapd
+    - rpcbind
+    - named
+    - rsync
+    - exim4

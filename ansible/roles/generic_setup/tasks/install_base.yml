@@ -1,0 +1,40 @@
+---
+
+- name: "load facts"
+  setup:
+    filter: ansible_facts.packages
+
+- name: "refresh cache"
+  apt:
+    update_cache: True
+    autoremove: True
+
+- name: "install stuff"
+  package:
+    package: "{{ item }}"
+    state: "present"
+  loop:
+    - aptitude
+    - apt-listchanges
+    - apt-transport-https
+    - coreutils
+    - fail2ban
+    - git
+    - haveged
+    - htop
+    - inxi
+    - lz4
+    - moreutils
+    - needrestart
+    - earlyoom
+    - python3-pip
+    - python3-seccomp
+    - python3-selinux
+    - seccomp
+    - selinux-policy-default
+    - sysstat
+    - tmux
+    - vim
+    - xz-utils
+    - zsh
+    - zstd
