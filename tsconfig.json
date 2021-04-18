@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "module": "CommonJS",
+    "target": "ES2015",
+    "declaration": false,
+    "downlevelIteration": true,
+    "jsx": "react",
+    "allowJs": true,
+    "strict": true
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}
