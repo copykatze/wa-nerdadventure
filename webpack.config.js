@@ -33,6 +33,6 @@ module.exports = {
   output: {
     filename: 'script.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
+    publicPath: '/dist/'
   }
 };
