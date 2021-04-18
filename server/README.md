@@ -18,7 +18,7 @@ The `user-data` functionality of Cloud-Init works as a Kickstarter for the serve
 
 # Execute Ansible:
 ```
-cd /opt/nerdadventure
+cd /opt/nerdadventure/ansible/
 ansible-playbook deployment.yml -e @vars.vault.yml --ask-vault-pass
 ```
 
@@ -50,7 +50,7 @@ uploader.workadventure 600 IN A <ip>
 ### Start Workadventure (on the server)
 ```
 cd /opt/workadventure/contrib/docker
-docker-compose up -d
+sudo docker-compose up -d
 ```
 
-access `https://play.workadventure.<domain>`
+access `https://play.workadventure.1533.eu`
