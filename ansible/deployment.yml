@@ -1,0 +1,38 @@
+---
+- hosts: localhost
+  gather_facts: true
+  become: true
+  vars:
+    workadventure_domain: "workadventure.1533.eu"
+    workadventure_start_room: "/_/global/raw.githubusercontent.com/copykatze/wa-nerdadventure/master/maps/silpion_6og.json"
+    jitsi_url: "jitsi.1533.eu"
+    jitsi_private_mode: False
+    skip_full_upgrade: True
+    ansible_become_pass: "{{ local_become_pass }}"
+    turn_server: stun.l.google.com:19302
+  tasks:
+
+    - include_role:
+        name: user_setup
+      loop:
+        - "{{ users.admin }}"
+
+    - include_role:
+        name: generic_setup
+      tags:
+        - packages
+
+    - include_role:
+        name: security
+      tags:
+        - security
+
+    - include_role:
+        name: docker_setup
+      tags:
+        - packages
+
+    - include_role:
+        name: workadventure_setup
+      tags:
+        - product

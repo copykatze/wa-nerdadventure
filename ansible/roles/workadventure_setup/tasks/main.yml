@@ -1,0 +1,40 @@
+---
+- name: "Pull Master Branch of workadventure"
+  git:
+    repo: "https://github.com/thecodingmachine/workadventure"
+    dest: "/opt/workadventure"
+
+- name: "Create workadventure dir"
+  file:
+    path: "/opt/workadventure"
+    state: "directory"
+    group: "docker"
+    recurse: true
+    mode: "0775"
+
+- name: "supply .env file"
+  template:
+    src: "env.j2"
+    dest: "/opt/workadventure/contrib/docker/.env"
+    group: "operator"
+    mode: "0770"
+
+- name: "supply docker-compose file"
+  template:
+    src: "docker-compose.yml.j2"
+    dest: "/opt/workadventure/contrib/docker/docker-compose.yml"
+    group: "operator"
+    mode: "0770"
+
+- name: "Create workadventure dir"
+  file:
+    path: "/opt/workadventure/contrib/docker/letsencrypt"
+    state: "directory"
+    group: "docker"
+    recurse: true
+    mode: "0775"
+
+
+- name: "Conclusion"
+  debug:
+    msg: "Workadventure is prepared. Have a look in /opt/workadventure"
