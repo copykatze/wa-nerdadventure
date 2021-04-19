@@ -26,12 +26,6 @@
          "id":22,
          "name":"webcam",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/player.twitch.tv\/?channel=xhaphir&parent=play.workadventure.1533.eu"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":70,
