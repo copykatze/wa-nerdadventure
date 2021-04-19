@@ -35,6 +35,7 @@ services:
       JITSI_URL: $JITSI_URL
       JITSI_PRIVATE_MODE: "$JITSI_PRIVATE_MODE"
       API_URL: pusher.${DOMAIN}
+      STUN_SERVER: "${STUN_SERVER}"
       TURN_SERVER: "${TURN_SERVER}"
       TURN_USER: "${TURN_USER}"
       TURN_PASSWORD: "${TURN_PASSWORD}"
@@ -89,3 +90,28 @@ services:
       - "traefik.http.routers.back-ssl.service=back"
       - "traefik.http.routers.back-ssl.tls.certresolver=myresolver"
     restart: unless-stopped
+
+  coturn:
+    image: coturn/coturn:4.5.2
+    command:
+      - turnserver
+      #- -c=/etc/coturn/turnserver.conf
+      - --log-file=stdout
+      - --external-ip=$$(detect-external-ip)
+      - --listening-port=3478
+      - --min-port=10000
+      - --max-port=10010
+      - --tls-listening-port=5349
+      - --listening-ip=0.0.0.0
+      - --realm=coturn.workadventure.localhost
+      - --server-name=coturn.workadventure.localhost
+      - --lt-cred-mech
+      # Enable Coturn "REST API" to validate temporary passwords.
+      #- --use-auth-secret
+      #- --static-auth-secret=SomeStaticAuthSecret
+      #- --userdb=/var/lib/turn/turndb
+      - --user=workadventure:WorkAdventure123
+      # use real-valid certificate/privatekey files
+      #- --cert=/root/letsencrypt/fullchain.pem
+      #- --pkey=/root/letsencrypt/privkey.pem
+    network_mode: host
