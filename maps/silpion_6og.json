@@ -66,7 +66,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"http:\/\/media.textadventures.co.uk\/games\/q1w9Tw48L0qlzO8lBwzeZA\/index.html"
+                 "value":"https:\/\/media.textadventures.co.uk\/games\/q1w9Tw48L0qlzO8lBwzeZA\/index.html"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -80,12 +80,6 @@
          "id":25,
          "name":"pinnwand",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/jamboard.google.com\/d\/1scJwervkDuittNT9sZ3rZmSDTagBLPsmmdMtz9jOcbY\/edit?usp=sharing"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":70,
