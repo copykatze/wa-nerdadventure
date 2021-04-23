@@ -1,0 +1,30 @@
+apt update
+apt upgrade
+apt install apt-transport-https
+apt-add-repository universe
+apt install openjdk-8-jdk
+hostnamectl set-hostname jitsi.1533.eu
+hostname
+nano /etc/hosts
+systemctl status nginx
+sudo ufw status verbose
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+ufw allow 10000/udp
+ufw allow 22/tcp
+ufw allow 3478/udp
+ufw allow 5349/tcp
+ufw enable
+ufw status verbose
+curl https://download.jitsi.org/jitsi-key.gpg.key | sh -c 'gpg --dearmor > /usr/share/keyrings/jitsi-keyring.gpg'
+echo 'deb [signed-by=/usr/share/keyrings/jitsi-keyring.gpg] https://download.jitsi.org stable/' | tee /etc/apt/sources.list.d/jitsi-stable.list > /dev/null
+sudo apt update
+apt -y install jitsi-meet
+/usr/share/jitsi-meet/scripts/install-letsencrypt-cert.sh
+nano /etc/prosody/conf.avail/jitsi.1533.eu.cfg.lua 
+nano /etc/jitsi/meet/jitsi.1533.eu-config.js 
+service prosody restart && service jicofo restart && service jitsi-videobridge2 restart && service nginx restart
+ufw status verbose
+nano /etc/jitsi/meet/jitsi.1533.eu-config.js 
+top
+exit
