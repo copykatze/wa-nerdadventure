@@ -58,7 +58,7 @@
          "opacity":1,
          "properties":[
                 {
-                 "name":"jitsiRoom",
+                 "name":"meetingRoom",
                  "type":"string",
                  "value":"silpion-kicker2og"
                 }],
