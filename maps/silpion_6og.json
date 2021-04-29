@@ -206,6 +206,12 @@
          "id":25,
          "name":"pinnwand",
          "opacity":1,
+         "properties":[
+                {
+                 "name":"openWebsite",
+                 "type":"string",
+                 "value":"https:\/\/slpn.uber.space\/s\/87ea597"
+                }],
          "type":"tilelayer",
          "visible":true,
          "width":70,
