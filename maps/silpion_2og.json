@@ -42,7 +42,7 @@
                 {
                  "name":"exitSceneUrl",
                  "type":"string",
-                 "value":".\/silpion_6og.json"
+                 "value":"https:\/\/play.workadventure.1533.eu\/_\/global\/copykatze.github.io\/wa-nerdadventure\/maps\/silpion_6og.json"
                 }],
          "type":"tilelayer",
          "visible":true,
