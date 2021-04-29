@@ -30,7 +30,7 @@
                 {
                  "name":"playAudio",
                  "type":"string",
-                 "value":"sounds\/dachterasse.m4a"
+                 "value":"..\/sounds\/dachterasse.m4a"
                 }],
          "type":"tilelayer",
          "visible":true,
