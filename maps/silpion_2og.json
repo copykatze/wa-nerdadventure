@@ -40,7 +40,7 @@
          "opacity":1,
          "properties":[
                 {
-                 "name":"exitSceneUrl",
+                 "name":"exitUrl",
                  "type":"string",
                  "value":"https:\/\/play.workadventure.1533.eu\/_\/global\/copykatze.github.io\/wa-nerdadventure\/maps\/silpion_6og.json"
                 }],
