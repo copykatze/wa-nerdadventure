@@ -104,7 +104,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":".\/silpion-parkplatz.json"
+                 "value":".\/silpion_parkplatz.json"
                 }],
          "type":"tilelayer",
          "visible":true,
