@@ -89,7 +89,7 @@
                  "value":".\/silpion_2og.json#start-fluchtweg"
                 }],
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":70,
          "x":0,
          "y":0
@@ -125,7 +125,7 @@
                  "value":".\/silpion_2og.json#start-haupteingang"
                 }],
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":70,
          "x":0,
          "y":0
@@ -143,7 +143,7 @@
                  "value":true
                 }],
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":70,
          "x":0,
          "y":0
@@ -161,7 +161,7 @@
                  "value":true
                 }],
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":70,
          "x":0,
          "y":0
@@ -173,7 +173,7 @@
          "name":"start",
          "opacity":1,
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":70,
          "x":0,
          "y":0
