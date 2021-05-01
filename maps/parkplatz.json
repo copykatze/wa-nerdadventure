@@ -42,7 +42,7 @@
                 {
                  "name":"playAudio",
                  "type":"string",
-                 "value":"https:\/\/github.com\/dim-0\/rc3-map\/blob\/no-masters\/sound\/campfire.mp3"
+                 "value":"https:\/\/github.com\/dim-0\/rc3-map\/blob\/no-masters\/sound\/campfire.mp3?raw=true"
                 }],
          "type":"tilelayer",
          "visible":true,
