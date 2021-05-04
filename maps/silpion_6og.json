@@ -456,9 +456,9 @@
          "opacity":1,
          "properties":[
                 {
-                 "name":"jitsiRoom",
+                 "name":"meetingRoom",
                  "type":"string",
-                 "value":"silpion-konfi"
+                 "value":"silpion-konfi6og"
                 }],
          "type":"tilelayer",
          "visible":true,
