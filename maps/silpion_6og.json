@@ -456,7 +456,7 @@
          "opacity":1,
          "properties":[
                 {
-                 "name":"meetingRoom",
+                 "name":"chatRoom",
                  "type":"string",
                  "value":"silpion-konfi6og"
                 }],
