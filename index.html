@@ -2,19 +2,33 @@
     <head>
         <script>
             window.onload = function() {
-                var path = window.location.pathname;
+                let path = window.location.pathname;
                 if (path.endsWith('index.html')) {
                     path = path.substr(path, path.length - 'index.html'.length);
                 }
-                var url = 'http://play.workadventure.1533.eu/_/global/'+window.location.host+path+'maps/silpion_6og.json';
-                document.getElementById('mapLink').href = url;
-                document.getElementById('mapLink').innerText = url;
+                const maps = [
+                    'hamburg.json',
+                    'parkplatz.json',
+                    'silpion_2og.json',
+                    'silpion_6og.json',
+                    'silpion_parkplatz.json',
+                    'silpion_parkplatz_v2.json',
+                ];
+                maps
+                    .map(m => `http://play.workadventure.1533.eu/_/global/${window.location.host}${path}maps/${m}`)
+                    .forEach(url => {
+                       document
+                           .getElementById('mapLinks')
+                           .insertAdjacentHTML('beforeend', `<li><a href="${url}">${url}</a></li>`);
+                    });
+
+
             };
         </script>
     </head>
     <body>
         This website contains a map for <a href="https://play.workadventure.1533.eu/">workadventure.1533.eu</a>.
         <br/>
-        You can access this map at <a id="mapLink" href=""></a>
+        <ul id="mapLinks"></ul>
     </body>
 </html>
