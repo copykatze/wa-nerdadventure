@@ -6,7 +6,14 @@
                 if (path.endsWith('index.html')) {
                     path = path.substr(path, path.length - 'index.html'.length);
                 }
-                const maps = ['silpion_6og.json', 'silpion_2og.json'];
+                const maps = [
+                    'hamburg.json',
+                    'parkplatz.json',
+                    'silpion_2og.json',
+                    'silpion_6og.json',
+                    'silpion_parkplatz.json',
+                    'silpion_parkplatz_v2.json',
+                ];
                 maps
                     .map(m => `http://play.workadventure.1533.eu/_/global/${window.location.host}${path}maps/${m}`)
                     .forEach(url => {
