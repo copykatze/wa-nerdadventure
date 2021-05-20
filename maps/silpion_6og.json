@@ -204,7 +204,7 @@
          "opacity":1,
          "properties":[
                 {
-                 "name":"openUrl",
+                 "name":"openWebsite",
                  "type":"string",
                  "value":"https:\/\/pusher.workadventure.1533.eu\/metrics"
                 }],
