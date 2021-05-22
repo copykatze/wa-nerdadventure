@@ -56,6 +56,12 @@
          "id":12,
          "name":"exit-hamburg",
          "opacity":1,
+         "properties":[
+                {
+                 "name":"exitUrl",
+                 "type":"string",
+                 "value":".\/hamburg.json"
+                }],
          "type":"tilelayer",
          "visible":true,
          "width":49,
