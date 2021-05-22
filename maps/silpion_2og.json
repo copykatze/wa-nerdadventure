@@ -270,7 +270,7 @@
                 {
                  "name":"jitsiRoom",
                  "type":"string",
-                 "value":"silpion-phonebox"
+                 "value":"phonebox"
                 }],
          "type":"tilelayer",
          "visible":true,

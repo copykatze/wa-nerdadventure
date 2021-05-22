@@ -45,7 +45,7 @@
                  "value":"https:\/\/2020game.io"
                 }],
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":40,
          "x":0,
          "y":0
@@ -63,7 +63,7 @@
                  "value":"https:\/\/playpong.net\/basic"
                 }],
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":40,
          "x":0,
          "y":0
@@ -81,7 +81,7 @@
                  "value":"https:\/\/www.cbc.ca\/kids\/games\/play\/foosball"
                 }],
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":40,
          "x":0,
          "y":0
@@ -99,7 +99,7 @@
                  "value":"https:\/\/flappybird.io\/"
                 }],
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":40,
          "x":0,
          "y":0
@@ -117,7 +117,7 @@
                  "value":"https:\/\/freepacman.org\/"
                 }],
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":40,
          "x":0,
          "y":0
@@ -135,7 +135,7 @@
                  "value":"https:\/\/media.textadventures.co.uk\/games\/q1w9Tw48L0qlzO8lBwzeZA\/index.html"
                 }],
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":40,
          "x":0,
          "y":0
@@ -153,7 +153,7 @@
                  "value":"https:\/\/files.freemusicarchive.org\/storage-freemusicarchive-org\/tracks\/tNxj5zUnSk0NFMnxoMwsYrGEvLhF3ErL8Su85ycq.mp3"
                 }],
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":40,
          "x":0,
          "y":0
@@ -278,7 +278,7 @@
                 {
                  "name":"jitsiRoom",
                  "type":"string",
-                 "value":"silpion-phonebox"
+                 "value":"phonebox"
                 }],
          "type":"tilelayer",
          "visible":true,
